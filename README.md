@@ -33,18 +33,19 @@ This folder contains the code used to scrape tweets since 2012 and generate sent
 ## Reddit Scrape and wordcloud
 ****************************
 
-Enter the cavernous Reddit folder to find cave carvings of the creatation of a wordcloud from a Reddit Comment thread as well as a copy of the cloud.
+Enter the cavernous Reddit folder to find the creation of a wordcloud from a Reddit Comment thread as well as a copy of the cloud.
 
 ****************************************************
 ## SciKit learn predictions for unemployment in London 
 ****************************************************
 
-It may sound scary but this alien tech is kind, like E.T.
 The code found in the file unemployment_prediction uses previous unemployment data to predict the future. 
 This link shows the results with the red based on real data and the blue a prediction:
 https://plot.ly/~RobDavies1995/27
 
 **********
-## TFL Stuff
+## TFL V UBER
 **********
-Contains the TFL data and the Tableau file used to generate the Tableau Public above. 
+This contains data supplied by TFL and Data.London as well as the SQL extracts and Tableau workbook.
+The following link will take you to our visualistaions of this data.
+https://public.tableau.com/profile/robert.davies8295#!/vizhome/TFLanduber/Story1

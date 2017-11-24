@@ -1,0 +1,1913 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 10400.17.1103.1137                               -->
+<workbook original-version='10.4' source-build='10.4.1 (10400.17.1103.1137)' source-platform='win' version='10.4' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <repository-location id='TFLanduber' path='/workbooks' revision='1.0' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='10.4'>
+      <aliases enabled='yes' />
+      <column caption='Parameter 1' datatype='datetime' name='[Parameter 1]' param-domain-type='any' role='measure' type='quantitative' value='#2017-08-29 16:28:32.748#'>
+        <calculation class='tableau' formula='#2017-08-29 16:28:32.748#' />
+      </column>
+      <column caption='Parameter 2' datatype='datetime' name='[Parameter 2]' param-domain-type='any' role='measure' type='quantitative' value='#2012-06-01 16:08:00.563#'>
+        <calculation class='tableau' formula='#2012-06-01 16:08:00.563#' />
+      </column>
+      <column caption='Parameter 3' datatype='datetime' name='[Parameter 3]' param-domain-type='any' role='measure' type='quantitative' value='#2016-08-13 16:33:03.331#'>
+        <calculation class='tableau' formula='#2016-08-13 16:33:03.331#' />
+      </column>
+    </datasource>
+    <datasource caption='tfl_out (uber)' inline='true' name='federated.0c7fw9y17sgzsr1ecyd950gdsx6y' version='10.4'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='.' name='sqlserver.0o3nzk40v2jxc41h5li8r09d3rk5'>
+            <connection authentication='sspi' class='sqlserver' dbname='uber' minimum-driver-version='SQL Server Native Client 10.0' odbc-native-protocol='yes' one-time-sql='' server='.' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='sqlserver.0o3nzk40v2jxc41h5li8r09d3rk5' name='tfl_out' table='[dbo].[tfl_out]' type='table' />
+        <refresh increment-key='' incremental-updates='false' />
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>Bus journeys</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Bus journeys]</local-name>
+            <parent-name>[tfl_out]</parent-name>
+            <remote-alias>Bus journeys</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Underground journeys </remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Underground journeys ]</local-name>
+            <parent-name>[tfl_out]</parent-name>
+            <remote-alias>Underground journeys </remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DLR Journeys </remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[DLR Journeys ]</local-name>
+            <parent-name>[tfl_out]</parent-name>
+            <remote-alias>DLR Journeys </remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Tram Journeys</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Tram Journeys]</local-name>
+            <parent-name>[tfl_out]</parent-name>
+            <remote-alias>Tram Journeys</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Overground Journeys</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Overground Journeys]</local-name>
+            <parent-name>[tfl_out]</parent-name>
+            <remote-alias>Overground Journeys</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Emirates Airline Journeys </remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Emirates Airline Journeys ]</local-name>
+            <parent-name>[tfl_out]</parent-name>
+            <remote-alias>Emirates Airline Journeys </remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>period_beginning</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[period_beginning]</local-name>
+            <parent-name>[tfl_out]</parent-name>
+            <remote-alias>period_beginning</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
+              <attribute datatype='boolean' name='TypeIsDateTime2orDate'>true</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>period_ending</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[period_ending]</local-name>
+            <parent-name>[tfl_out]</parent-name>
+            <remote-alias>period_ending</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
+              <attribute datatype='boolean' name='TypeIsDateTime2orDate'>true</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Bus journeys]' role='measure' type='quantitative' />
+      <column caption='sum' datatype='integer' name='[Calculation_718887096257626112]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Bus journeys] + [DLR Journeys ]+ [Emirates Airline Journeys ] + [Overground Journeys] + [Tram Journeys] + [Underground journeys ]' />
+      </column>
+      <column caption='DLR Journeys' datatype='integer' name='[DLR Journeys ]' role='measure' type='quantitative' />
+      <column caption='Emirates Airline Journeys' datatype='integer' name='[Emirates Airline Journeys ]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column datatype='integer' name='[Overground Journeys]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Tram Journeys]' role='measure' type='quantitative' />
+      <column caption='Underground journeys' datatype='integer' name='[Underground journeys ]' role='measure' type='quantitative' />
+      <column caption='Period Beginning' datatype='date' name='[period_beginning]' role='dimension' type='ordinal' />
+      <column caption='Period Ending' datatype='date' name='[period_ending]' role='dimension' type='ordinal' />
+      <column-instance column='[Bus journeys]' derivation='Sum' name='[sum:Bus journeys:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[DLR Journeys ]' derivation='Sum' name='[sum:DLR Journeys :qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Emirates Airline Journeys ]' derivation='Sum' name='[sum:Emirates Airline Journeys :qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Overground Journeys]' derivation='Sum' name='[sum:Overground Journeys:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Tram Journeys]' derivation='Sum' name='[sum:Tram Journeys:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Underground journeys ]' derivation='Sum' name='[sum:Underground journeys :qk]' pivot='key' type='quantitative' />
+      <extract count='-1' enabled='true' units='records'>
+        <connection class='dataengine' dbname='C:/Users/Student/Documents/My Tableau Repository/uberextracts/tfl_out (uber).tde' schema='Extract' tablename='Extract' update-time='11/24/2017 11:31:05 AM'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <calculations>
+            <calculation column='[Calculation_718887096257626112]' formula='[Bus journeys] + [DLR Journeys ]+ [Emirates Airline Journeys ] + [Overground Journeys] + [Tram Journeys] + [Underground journeys ]' />
+            <calculation column='[Number of Records]' formula='1' />
+          </calculations>
+          <refresh increment-key='' incremental-updates='false'>
+            <refresh-event add-from-file-path='' increment-value='%null%' refresh-type='create' rows-inserted='85' timestamp-start='2017-11-24 11:31:05.763' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Bus journeys</remote-name>
+              <remote-type>3</remote-type>
+              <local-name>[Bus journeys]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Bus journeys</remote-alias>
+              <ordinal>0</ordinal>
+              <family>tfl_out</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>85</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>15242089856.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>179318704.18823528</statistic>
+                <statistic aggregation='Min' datatype='integer'>145754936</statistic>
+                <statistic aggregation='Max' datatype='integer'>207509939</statistic>
+                <statistic aggregation='Stdev' datatype='real'>13010354.6245452</statistic>
+                <statistic aggregation='StdevP' datatype='real'>12933596.700222105</statistic>
+                <statistic aggregation='Var' datatype='real'>169269327456424.66</statistic>
+                <statistic aggregation='VarP' datatype='real'>167277923603996.13</statistic>
+                <statistic aggregation='Count' datatype='integer'>85</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>2.7474104256049055e+18</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint32&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Calculation_718887096257626112</remote-name>
+              <remote-type>3</remote-type>
+              <local-name>[Calculation_718887096257626112]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Calculation_718887096257626112</remote-alias>
+              <ordinal>1</ordinal>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>85</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>25514325599.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>300168536.4588235</statistic>
+                <statistic aggregation='Min' datatype='integer'>244502275</statistic>
+                <statistic aggregation='Max' datatype='integer'>349062096</statistic>
+                <statistic aggregation='Stdev' datatype='real'>20972702.798776411</statistic>
+                <statistic aggregation='StdevP' datatype='real'>20848968.959020641</statistic>
+                <statistic aggregation='Var' datatype='real'>439854262685803.88</statistic>
+                <statistic aggregation='VarP' datatype='real'>434679506654206.19</statistic>
+                <statistic aggregation='Count' datatype='integer'>85</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>7.6955455318513336e+18</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint32&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>DLR Journeys </remote-name>
+              <remote-type>3</remote-type>
+              <local-name>[DLR Journeys ]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>DLR Journeys </remote-alias>
+              <ordinal>2</ordinal>
+              <family>tfl_out</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>82</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>702625775.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>8266185.5882352944</statistic>
+                <statistic aggregation='Min' datatype='integer'>5238000</statistic>
+                <statistic aggregation='Max' datatype='integer'>10636562</statistic>
+                <statistic aggregation='Stdev' datatype='real'>1192021.6595142977</statistic>
+                <statistic aggregation='StdevP' datatype='real'>1184989.0219749741</statistic>
+                <statistic aggregation='Var' datatype='real'>1420915636751.2202</statistic>
+                <statistic aggregation='VarP' datatype='real'>1404198982201.2058</statistic>
+                <statistic aggregation='Count' datatype='integer'>85</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>5927391968714757.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint32&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Emirates Airline Journeys </remote-name>
+              <remote-type>3</remote-type>
+              <local-name>[Emirates Airline Journeys ]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Emirates Airline Journeys </remote-alias>
+              <ordinal>3</ordinal>
+              <family>tfl_out</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>70</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>8981669.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>105666.69411764706</statistic>
+                <statistic aggregation='Min' datatype='integer'>0</statistic>
+                <statistic aggregation='Max' datatype='integer'>534218</statistic>
+                <statistic aggregation='Stdev' datatype='real'>80627.587295809717</statistic>
+                <statistic aggregation='StdevP' datatype='real'>80151.904163212428</statistic>
+                <statistic aggregation='Var' datatype='real'>6500807833.1434174</statistic>
+                <statistic aggregation='VarP' datatype='real'>6424327740.9887886</statistic>
+                <statistic aggregation='Count' datatype='integer'>85</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>1495131128873.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint32&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Number of Records</remote-name>
+              <remote-type>16</remote-type>
+              <local-name>[Number of Records]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Number of Records</remote-alias>
+              <ordinal>4</ordinal>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>85.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>1.0</statistic>
+                <statistic aggregation='Min' datatype='integer'>1</statistic>
+                <statistic aggregation='Max' datatype='integer'>1</statistic>
+                <statistic aggregation='Stdev' datatype='real'>0.0</statistic>
+                <statistic aggregation='StdevP' datatype='real'>0.0</statistic>
+                <statistic aggregation='Var' datatype='real'>0.0</statistic>
+                <statistic aggregation='VarP' datatype='real'>0.0</statistic>
+                <statistic aggregation='Count' datatype='integer'>85</statistic>
+                <statistic aggregation='Median' datatype='integer'>1</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>85.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint8&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Overground Journeys</remote-name>
+              <remote-type>3</remote-type>
+              <local-name>[Overground Journeys]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Overground Journeys</remote-alias>
+              <ordinal>5</ordinal>
+              <family>tfl_out</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>84</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>943405043.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>11098882.858823529</statistic>
+                <statistic aggregation='Min' datatype='integer'>6255827</statistic>
+                <statistic aggregation='Max' datatype='integer'>15696996</statistic>
+                <statistic aggregation='Stdev' datatype='real'>2377184.4728432358</statistic>
+                <statistic aggregation='StdevP' datatype='real'>2363159.6632869849</statistic>
+                <statistic aggregation='Var' datatype='real'>5651006017926.9736</statistic>
+                <statistic aggregation='VarP' datatype='real'>5584523594186.6563</statistic>
+                <statistic aggregation='Count' datatype='integer'>85</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>10945426566186240.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint32&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Tram Journeys</remote-name>
+              <remote-type>3</remote-type>
+              <local-name>[Tram Journeys]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Tram Journeys</remote-alias>
+              <ordinal>6</ordinal>
+              <family>tfl_out</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>85</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>192882805.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>2269209.4705882352</statistic>
+                <statistic aggregation='Min' datatype='integer'>1813009</statistic>
+                <statistic aggregation='Max' datatype='integer'>2765871</statistic>
+                <statistic aggregation='Stdev' datatype='real'>196900.12959786781</statistic>
+                <statistic aggregation='StdevP' datatype='real'>195738.46677751953</statistic>
+                <statistic aggregation='Var' datatype='real'>38769661035.657143</statistic>
+                <statistic aggregation='VarP' datatype='real'>38313547376.414116</statistic>
+                <statistic aggregation='Count' datatype='integer'>85</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>440948139346619.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint32&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Underground journeys </remote-name>
+              <remote-type>3</remote-type>
+              <local-name>[Underground journeys ]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Underground journeys </remote-alias>
+              <ordinal>7</ordinal>
+              <family>tfl_out</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>85</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>8424340451.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>99109887.658823535</statistic>
+                <statistic aggregation='Min' datatype='integer'>78982838</statistic>
+                <statistic aggregation='Max' datatype='integer'>116663248</statistic>
+                <statistic aggregation='Stdev' datatype='real'>8725957.7350040544</statistic>
+                <statistic aggregation='StdevP' datatype='real'>8674476.7090982478</statistic>
+                <statistic aggregation='Var' datatype='real'>76142338393077.094</statistic>
+                <statistic aggregation='VarP' datatype='real'>75246546176687.953</statistic>
+                <statistic aggregation='Count' datatype='integer'>85</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>8.4133139212331123e+17</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint32&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>period_beginning</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[period_beginning]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>period_beginning</remote-alias>
+              <ordinal>8</ordinal>
+              <family>tfl_out</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>85</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='date'>#2011-04-01#</statistic>
+                <statistic aggregation='Max' datatype='date'>#2017-09-17#</statistic>
+                <statistic aggregation='Count' datatype='integer'>85</statistic>
+                <statistic aggregation='Median' datatype='date'>#2014-06-22#</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>0</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;date&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>period_ending</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[period_ending]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>period_ending</remote-alias>
+              <ordinal>9</ordinal>
+              <family>tfl_out</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>85</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='date'>#2011-04-30#</statistic>
+                <statistic aggregation='Max' datatype='date'>#2017-10-14#</statistic>
+                <statistic aggregation='Count' datatype='integer'>85</statistic>
+                <statistic aggregation='Median' datatype='date'>#2014-07-19#</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;date&quot;</attribute>
+              </attributes>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' dim-percentage='0.41689' measure-ordering='alphabetic' measure-percentage='0.502681' parameter-percentage='0.080429' show-structure='true' user-set-layout='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0c7fw9y17sgzsr1ecyd950gdsx6y].[sum:Bus journeys:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.0c7fw9y17sgzsr1ecyd950gdsx6y].[sum:Emirates Airline Journeys :qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.0c7fw9y17sgzsr1ecyd950gdsx6y].[sum:DLR Journeys :qk]&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;[federated.0c7fw9y17sgzsr1ecyd950gdsx6y].[sum:Tram Journeys:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.0c7fw9y17sgzsr1ecyd950gdsx6y].[sum:Overground Journeys:qk]&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;[federated.0c7fw9y17sgzsr1ecyd950gdsx6y].[sum:Number of Records:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0c7fw9y17sgzsr1ecyd950gdsx6y].[sum:Underground journeys :qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <date-options start-of-week='monday' />
+    </datasource>
+    <datasource caption='combined (uber)' inline='true' name='federated.1k4253n1h2tlol0zrtxuw1bjtpmd' version='10.4'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='.' name='sqlserver.04wd1xq1atc25t1gju7l90i0j232'>
+            <connection authentication='sspi' class='sqlserver' dbname='uber' odbc-native-protocol='yes' one-time-sql='' server='.' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='sqlserver.04wd1xq1atc25t1gju7l90i0j232' name='combined' table='[dbo].[combined]' type='table' />
+        <refresh increment-key='' incremental-updates='false' />
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>Total licensed taxis</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Total licensed taxis]</local-name>
+            <parent-name>[combined]</parent-name>
+            <remote-alias>Total licensed taxis</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Taxi only licensed drivers</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Taxi only licensed drivers]</local-name>
+            <parent-name>[combined]</parent-name>
+            <remote-alias>Taxi only licensed drivers</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Total licensed PHVs</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Total licensed PHVs]</local-name>
+            <parent-name>[combined]</parent-name>
+            <remote-alias>Total licensed PHVs</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Total driver  licences  issued</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Total driver  licences  issued]</local-name>
+            <parent-name>[combined]</parent-name>
+            <remote-alias>Total driver  licences  issued</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Total licensed vehicles</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Total licensed vehicles]</local-name>
+            <parent-name>[combined]</parent-name>
+            <remote-alias>Total licensed vehicles</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Underground</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Underground]</local-name>
+            <parent-name>[combined]</parent-name>
+            <remote-alias>Underground</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Overground</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Overground]</local-name>
+            <parent-name>[combined]</parent-name>
+            <remote-alias>Overground</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DLR</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[DLR]</local-name>
+            <parent-name>[combined]</parent-name>
+            <remote-alias>DLR</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Bus</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Bus]</local-name>
+            <parent-name>[combined]</parent-name>
+            <remote-alias>Bus</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cable</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[cable]</local-name>
+            <parent-name>[combined]</parent-name>
+            <remote-alias>cable</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Tram</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Tram]</local-name>
+            <parent-name>[combined]</parent-name>
+            <remote-alias>Tram</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Year]</local-name>
+            <parent-name>[combined]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Bus]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[DLR]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column datatype='integer' name='[Overground]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Taxi only licensed drivers]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Total driver  licences  issued]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Total licensed PHVs]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Total licensed taxis]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Total licensed vehicles]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Tram]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Underground]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+      <column caption='Cable' datatype='integer' name='[cable]' role='measure' type='quantitative' />
+      <column-instance column='[Bus]' derivation='Sum' name='[sum:Bus:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[DLR]' derivation='Sum' name='[sum:DLR:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Overground]' derivation='Sum' name='[sum:Overground:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Taxi only licensed drivers]' derivation='Sum' name='[sum:Taxi only licensed drivers:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Total driver  licences  issued]' derivation='Sum' name='[sum:Total driver  licences  issued:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Total licensed PHVs]' derivation='Sum' name='[sum:Total licensed PHVs:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Total licensed taxis]' derivation='Sum' name='[sum:Total licensed taxis:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Total licensed vehicles]' derivation='Sum' name='[sum:Total licensed vehicles:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Tram]' derivation='Sum' name='[sum:Tram:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Underground]' derivation='Sum' name='[sum:Underground:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[cable]' derivation='Sum' name='[sum:cable:qk]' pivot='key' type='quantitative' />
+      <extract count='-1' enabled='true' units='records'>
+        <connection class='dataengine' dbname='C:/Users/Student/Documents/My Tableau Repository/uberextracts/combined (uber).tde' schema='Extract' tablename='Extract' update-time='11/24/2017 11:30:56 AM'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <calculations>
+            <calculation column='[Number of Records]' formula='1' />
+          </calculations>
+          <refresh increment-key='' incremental-updates='false'>
+            <refresh-event add-from-file-path='' increment-value='%null%' refresh-type='create' rows-inserted='7' timestamp-start='2017-11-24 11:30:56.876' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Bus</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Bus]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Bus</remote-alias>
+              <ordinal>0</ordinal>
+              <family>combined</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>15242089856.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>2177441408.0</statistic>
+                <statistic aggregation='Min' datatype='integer'>1744779207</statistic>
+                <statistic aggregation='Max' datatype='integer'>2402296938</statistic>
+                <statistic aggregation='Stdev' datatype='real'>283279924.93042624</statistic>
+                <statistic aggregation='StdevP' datatype='real'>262266248.36264813</statistic>
+                <statistic aggregation='Var' datatype='real'>80247515868587936.0</statistic>
+                <statistic aggregation='VarP' datatype='real'>68783585030218232.0</statistic>
+                <statistic aggregation='Count' datatype='integer'>7</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>3.3670242692122681e+19</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>DLR</remote-name>
+              <remote-type>3</remote-type>
+              <local-name>[DLR]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>DLR</remote-alias>
+              <ordinal>1</ordinal>
+              <family>combined</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>702625775.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>100375110.71428572</statistic>
+                <statistic aggregation='Min' datatype='integer'>64922939</statistic>
+                <statistic aggregation='Max' datatype='integer'>120653437</statistic>
+                <statistic aggregation='Stdev' datatype='real'>18481312.301632058</statistic>
+                <statistic aggregation='StdevP' datatype='real'>17110370.399024673</statistic>
+                <statistic aggregation='Var' datatype='real'>341558904390456.38</statistic>
+                <statistic aggregation='VarP' datatype='real'>292764775191819.75</statistic>
+                <statistic aggregation='Count' datatype='integer'>7</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>72575493382678544.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint32&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Number of Records</remote-name>
+              <remote-type>16</remote-type>
+              <local-name>[Number of Records]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Number of Records</remote-alias>
+              <ordinal>2</ordinal>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>7.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>1.0</statistic>
+                <statistic aggregation='Min' datatype='integer'>1</statistic>
+                <statistic aggregation='Max' datatype='integer'>1</statistic>
+                <statistic aggregation='Stdev' datatype='real'>0.0</statistic>
+                <statistic aggregation='StdevP' datatype='real'>0.0</statistic>
+                <statistic aggregation='Var' datatype='real'>0.0</statistic>
+                <statistic aggregation='VarP' datatype='real'>0.0</statistic>
+                <statistic aggregation='Count' datatype='integer'>7</statistic>
+                <statistic aggregation='Median' datatype='integer'>1</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>7.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint8&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Overground</remote-name>
+              <remote-type>3</remote-type>
+              <local-name>[Overground]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Overground</remote-alias>
+              <ordinal>3</ordinal>
+              <family>combined</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>943405043.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>134772149.0</statistic>
+                <statistic aggregation='Min' datatype='integer'>75949554</statistic>
+                <statistic aggregation='Max' datatype='integer'>178606015</statistic>
+                <statistic aggregation='Stdev' datatype='real'>31685624.264063846</statistic>
+                <statistic aggregation='StdevP' datatype='real'>29335187.817511167</statistic>
+                <statistic aggregation='Var' datatype='real'>1003978785003431.6</statistic>
+                <statistic aggregation='VarP' datatype='real'>860553244288655.63</statistic>
+                <statistic aggregation='Count' datatype='integer'>7</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>1.3316859773256798e+17</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint32&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Taxi only licensed drivers</remote-name>
+              <remote-type>2</remote-type>
+              <local-name>[Taxi only licensed drivers]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Taxi only licensed drivers</remote-alias>
+              <ordinal>4</ordinal>
+              <family>combined</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>175942.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>25134.571428571428</statistic>
+                <statistic aggregation='Min' datatype='integer'>24487</statistic>
+                <statistic aggregation='Max' datatype='integer'>25571</statistic>
+                <statistic aggregation='Stdev' datatype='real'>366.2357424496127</statistic>
+                <statistic aggregation='StdevP' datatype='real'>339.06841161497488</statistic>
+                <statistic aggregation='Var' datatype='real'>134128.61904761905</statistic>
+                <statistic aggregation='VarP' datatype='real'>114967.38775510204</statistic>
+                <statistic aggregation='Count' datatype='integer'>7</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>4423031538.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>2</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint16&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Total driver  licences  issued</remote-name>
+              <remote-type>3</remote-type>
+              <local-name>[Total driver  licences  issued]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Total driver  licences  issued</remote-alias>
+              <ordinal>5</ordinal>
+              <family>combined</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>735639.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>105091.28571428571</statistic>
+                <statistic aggregation='Min' datatype='integer'>86270</statistic>
+                <statistic aggregation='Max' datatype='integer'>142199</statistic>
+                <statistic aggregation='Stdev' datatype='real'>20436.230855307655</statistic>
+                <statistic aggregation='StdevP' datatype='real'>18920.273289435827</statistic>
+                <statistic aggregation='Var' datatype='real'>417639531.5714286</statistic>
+                <statistic aggregation='VarP' datatype='real'>357976741.34693879</statistic>
+                <statistic aggregation='Count' datatype='integer'>7</statistic>
+                <statistic aggregation='Median' datatype='integer'>98234</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>79815085521.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint32&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Total licensed PHVs</remote-name>
+              <remote-type>3</remote-type>
+              <local-name>[Total licensed PHVs]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Total licensed PHVs</remote-alias>
+              <ordinal>6</ordinal>
+              <family>combined</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>432324.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>61760.571428571428</statistic>
+                <statistic aggregation='Min' datatype='integer'>49854</statistic>
+                <statistic aggregation='Max' datatype='integer'>87409</statistic>
+                <statistic aggregation='Stdev' datatype='real'>14510.313020482396</statistic>
+                <statistic aggregation='StdevP' datatype='real'>13433.939448353965</statistic>
+                <statistic aggregation='Var' datatype='real'>210549183.95238096</statistic>
+                <statistic aggregation='VarP' datatype='real'>180470729.10204083</statistic>
+                <statistic aggregation='Count' datatype='integer'>7</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>27963872386.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint32&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Total licensed taxis</remote-name>
+              <remote-type>2</remote-type>
+              <local-name>[Total licensed taxis]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Total licensed taxis</remote-alias>
+              <ordinal>7</ordinal>
+              <family>combined</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>155123.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>22160.428571428572</statistic>
+                <statistic aggregation='Min' datatype='integer'>21300</statistic>
+                <statistic aggregation='Max' datatype='integer'>22558</statistic>
+                <statistic aggregation='Stdev' datatype='real'>438.32098479799674</statistic>
+                <statistic aggregation='StdevP' datatype='real'>405.80637787808439</statistic>
+                <statistic aggregation='Var' datatype='real'>192125.28571428571</statistic>
+                <statistic aggregation='VarP' datatype='real'>164678.81632653062</statistic>
+                <statistic aggregation='Count' datatype='integer'>7</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>3438744913.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>2</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint16&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Total licensed vehicles</remote-name>
+              <remote-type>3</remote-type>
+              <local-name>[Total licensed vehicles]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Total licensed vehicles</remote-alias>
+              <ordinal>8</ordinal>
+              <family>combined</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>587448.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>83921.142857142855</statistic>
+                <statistic aggregation='Min' datatype='integer'>72022</statistic>
+                <statistic aggregation='Max' datatype='integer'>108709</statistic>
+                <statistic aggregation='Stdev' datatype='real'>14133.089098855582</statistic>
+                <statistic aggregation='StdevP' datatype='real'>13084.697959596833</statistic>
+                <statistic aggregation='Var' datatype='real'>199744207.47619048</statistic>
+                <statistic aggregation='VarP' datatype='real'>171209320.69387755</statistic>
+                <statistic aggregation='Count' datatype='integer'>7</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>50497772774.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint32&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Tram</remote-name>
+              <remote-type>3</remote-type>
+              <local-name>[Tram]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Tram</remote-alias>
+              <ordinal>9</ordinal>
+              <family>combined</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>192882805.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>27554686.428571429</statistic>
+                <statistic aggregation='Min' datatype='integer'>21917107</statistic>
+                <statistic aggregation='Max' datatype='integer'>30961540</statistic>
+                <statistic aggregation='Stdev' datatype='real'>3691198.82396559</statistic>
+                <statistic aggregation='StdevP' datatype='real'>3417386.0634841467</statistic>
+                <statistic aggregation='Var' datatype='real'>13624948758044.953</statistic>
+                <statistic aggregation='VarP' datatype='real'>11678527506895.674</statistic>
+                <statistic aggregation='Count' datatype='integer'>7</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>5396574901786559.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint32&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Underground</remote-name>
+              <remote-type>3</remote-type>
+              <local-name>[Underground]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Underground</remote-alias>
+              <ordinal>10</ordinal>
+              <family>combined</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>8424340451.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>1203477207.2857144</statistic>
+                <statistic aggregation='Min' datatype='integer'>896554953</statistic>
+                <statistic aggregation='Max' datatype='integer'>1372199794</statistic>
+                <statistic aggregation='Stdev' datatype='real'>173996533.4912698</statistic>
+                <statistic aggregation='StdevP' datatype='real'>161089487.9969655</statistic>
+                <statistic aggregation='Var' datatype='real'>30274793666978572.0</statistic>
+                <statistic aggregation='VarP' datatype='real'>25949823143124492.0</statistic>
+                <statistic aggregation='Count' datatype='integer'>7</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>1.0320150481195426e+19</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint32&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Year</remote-name>
+              <remote-type>2</remote-type>
+              <local-name>[Year]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Year</remote-alias>
+              <ordinal>11</ordinal>
+              <family>combined</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>14098.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>2014.0</statistic>
+                <statistic aggregation='Min' datatype='integer'>2011</statistic>
+                <statistic aggregation='Max' datatype='integer'>2017</statistic>
+                <statistic aggregation='Stdev' datatype='real'>2.1602468994692869</statistic>
+                <statistic aggregation='StdevP' datatype='real'>2.0</statistic>
+                <statistic aggregation='Var' datatype='real'>4.666666666666667</statistic>
+                <statistic aggregation='VarP' datatype='real'>4.0</statistic>
+                <statistic aggregation='Count' datatype='integer'>7</statistic>
+                <statistic aggregation='Median' datatype='integer'>2014</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>28393400.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>2</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>0</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint16&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>cable</remote-name>
+              <remote-type>3</remote-type>
+              <local-name>[cable]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>cable</remote-alias>
+              <ordinal>12</ordinal>
+              <family>combined</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>8981669.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>1283095.5714285714</statistic>
+                <statistic aggregation='Min' datatype='integer'>0</statistic>
+                <statistic aggregation='Max' datatype='integer'>1726178</statistic>
+                <statistic aggregation='Stdev' datatype='real'>589985.2181532057</statistic>
+                <statistic aggregation='StdevP' datatype='real'>546220.1735349315</statistic>
+                <statistic aggregation='Var' datatype='real'>348082557639.28571</statistic>
+                <statistic aggregation='VarP' datatype='real'>298356477976.53064</statistic>
+                <statistic aggregation='Count' datatype='integer'>7</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>13612835063773.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint32&quot;</attribute>
+              </attributes>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' dim-percentage='0.22252' measure-ordering='alphabetic' measure-percentage='0.529491' parameter-percentage='0.247989' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1k4253n1h2tlol0zrtxuw1bjtpmd].[sum:Bus:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1k4253n1h2tlol0zrtxuw1bjtpmd].[sum:Taxi only licensed drivers:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.1k4253n1h2tlol0zrtxuw1bjtpmd].[sum:Overground:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.1k4253n1h2tlol0zrtxuw1bjtpmd].[sum:Total licensed taxis:qk]&quot;</bucket>
+            </map>
+            <map to='#9c755f'>
+              <bucket>&quot;[federated.1k4253n1h2tlol0zrtxuw1bjtpmd].[sum:Total licensed vehicles:qk]&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;[federated.1k4253n1h2tlol0zrtxuw1bjtpmd].[sum:cable:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.1k4253n1h2tlol0zrtxuw1bjtpmd].[sum:Total licensed PHVs:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.1k4253n1h2tlol0zrtxuw1bjtpmd].[sum:Tram:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1k4253n1h2tlol0zrtxuw1bjtpmd].[sum:DLR:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1k4253n1h2tlol0zrtxuw1bjtpmd].[sum:Total driver  licences  issued:qk]&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;[federated.1k4253n1h2tlol0zrtxuw1bjtpmd].[sum:Underground:qk]&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;[federated.1k4253n1h2tlol0zrtxuw1bjtpmd].[sum:Number of Records:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <date-options start-of-week='monday' />
+    </datasource>
+  </datasources>
+  <actions>
+    <action caption='Highlight 1 (generated)' name='[Action1]'>
+      <activation auto-clear='true' type='on-select' />
+      <source type='sheet' worksheet='bus/tube' />
+      <command command='tsc:brush'>
+        <param name='special-fields' value='date-time' />
+        <param name='target' value='bus/tube' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='bus/tube'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontcolor='#3f9efb' fontsize='18'>UBER OR THE NIGHT TUBE?</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='tfl_out (uber)' name='federated.0c7fw9y17sgzsr1ecyd950gdsx6y' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Parameter 2' datatype='datetime' name='[Parameter 2]' param-domain-type='any' role='measure' type='quantitative' value='#2012-06-01 16:08:00.563#'>
+              <calculation class='tableau' formula='#2012-06-01 16:08:00.563#' />
+            </column>
+            <column caption='Parameter 3' datatype='datetime' name='[Parameter 3]' param-domain-type='any' role='measure' type='quantitative' value='#2016-08-13 16:33:03.331#'>
+              <calculation class='tableau' formula='#2016-08-13 16:33:03.331#' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.0c7fw9y17sgzsr1ecyd950gdsx6y'>
+            <column datatype='integer' name='[Bus journeys]' role='measure' type='quantitative' />
+            <column caption='DLR Journeys' datatype='integer' name='[DLR Journeys ]' role='measure' type='quantitative' />
+            <column caption='Emirates Airline Journeys' datatype='integer' name='[Emirates Airline Journeys ]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Overground Journeys]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Tram Journeys]' role='measure' type='quantitative' />
+            <column caption='Underground journeys' datatype='integer' name='[Underground journeys ]' role='measure' type='quantitative' />
+            <column caption='Period Beginning' datatype='date' name='[period_beginning]' role='dimension' type='ordinal' />
+            <column-instance column='[Bus journeys]' derivation='Sum' name='[sum:Bus journeys:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[DLR Journeys ]' derivation='Sum' name='[sum:DLR Journeys :qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Emirates Airline Journeys ]' derivation='Sum' name='[sum:Emirates Airline Journeys :qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Overground Journeys]' derivation='Sum' name='[sum:Overground Journeys:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Tram Journeys]' derivation='Sum' name='[sum:Tram Journeys:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Underground journeys ]' derivation='Sum' name='[sum:Underground journeys :qk]' pivot='key' type='quantitative' />
+            <column-instance column='[period_beginning]' derivation='Day-Trunc' name='[tdy:period_beginning:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0c7fw9y17sgzsr1ecyd950gdsx6y].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0c7fw9y17sgzsr1ecyd950gdsx6y].[sum:Overground Journeys:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0c7fw9y17sgzsr1ecyd950gdsx6y].[sum:Tram Journeys:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0c7fw9y17sgzsr1ecyd950gdsx6y].[sum:Underground journeys :qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0c7fw9y17sgzsr1ecyd950gdsx6y].[sum:DLR Journeys :qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0c7fw9y17sgzsr1ecyd950gdsx6y].[sum:Emirates Airline Journeys :qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <sort class='manual' column='[federated.0c7fw9y17sgzsr1ecyd950gdsx6y].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.0c7fw9y17sgzsr1ecyd950gdsx6y].[sum:Bus journeys:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0c7fw9y17sgzsr1ecyd950gdsx6y].[sum:Overground Journeys:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0c7fw9y17sgzsr1ecyd950gdsx6y].[sum:Tram Journeys:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0c7fw9y17sgzsr1ecyd950gdsx6y].[sum:Underground journeys :qk]&quot;</bucket>
+              <bucket>&quot;[federated.0c7fw9y17sgzsr1ecyd950gdsx6y].[sum:DLR Journeys :qk]&quot;</bucket>
+              <bucket>&quot;[federated.0c7fw9y17sgzsr1ecyd950gdsx6y].[sum:Emirates Airline Journeys :qk]&quot;</bucket>
+            </dictionary>
+          </sort>
+          <slices>
+            <column>[federated.0c7fw9y17sgzsr1ecyd950gdsx6y].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0c7fw9y17sgzsr1ecyd950gdsx6y].[sum:Underground journeys :qk]' field-type='quantitative' fold='true' scope='rows' synchronized='true' type='space' />
+            <encoding attr='space' class='0' field='[federated.0c7fw9y17sgzsr1ecyd950gdsx6y].[sum:Bus journeys:qk]' field-type='quantitative' max='218341582' min='60000000' range-type='fixed' scope='rows' type='space' />
+            <format attr='subtitle' class='0' field='[federated.0c7fw9y17sgzsr1ecyd950gdsx6y].[sum:Bus journeys:qk]' scope='rows' value='' />
+            <format attr='auto-subtitle' class='0' field='[federated.0c7fw9y17sgzsr1ecyd950gdsx6y].[sum:Bus journeys:qk]' scope='rows' value='true' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='background-color' field='[federated.0c7fw9y17sgzsr1ecyd950gdsx6y].[sum:Bus journeys:qk]' value='#ddebf0' />
+            <format attr='background-color' field='[federated.0c7fw9y17sgzsr1ecyd950gdsx6y].[sum:Underground journeys :qk]' value='#e9ebe0' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='fill-above' id='refline0' value='#00000000' />
+            <format attr='fill-below' id='refline0' value='#00000000' />
+            <format attr='stroke-color' id='refline0' value='#303c42' />
+            <format attr='line-visibility' id='refline0' value='on' />
+            <format attr='line-pattern-only' id='refline0' value='dashed' />
+            <format attr='fill-above' id='refline1' value='#00000000' />
+            <format attr='fill-below' id='refline1' value='#00000000' />
+            <format attr='line-visibility' id='refline1' value='on' />
+            <format attr='line-pattern-only' id='refline1' value='dashed' />
+            <format attr='stroke-color' id='refline1' value='#4e79a7' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='6' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <lod column='[federated.0c7fw9y17sgzsr1ecyd950gdsx6y].[:Measure Names]' />
+            </encodings>
+            <dropline drop-when='selected' haslabel='false' x-axis='true' y-axis='true' />
+            <trendline enable-confidence-bands='false' enable-instant-analytics='true' enabled='true' exclude-color='false' exclude-intercept='false' fit='linear' />
+            <reference-line axis-column='[federated.0c7fw9y17sgzsr1ecyd950gdsx6y].[tdy:period_beginning:qk]' enable-instant-analytics='true' formula='min' id='refline0' label-type='none' scope='per-pane' value-column='[Parameters].[Parameter 2]' z-order='1' />
+            <reference-line axis-column='[federated.0c7fw9y17sgzsr1ecyd950gdsx6y].[tdy:period_beginning:qk]' enable-instant-analytics='true' formula='min' id='refline1' label-type='none' scope='per-pane' value-column='[Parameters].[Parameter 3]' z-order='2' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#0dc25e' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='7' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0c7fw9y17sgzsr1ecyd950gdsx6y].[sum:Bus journeys:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <lod column='[federated.0c7fw9y17sgzsr1ecyd950gdsx6y].[:Measure Names]' />
+            </encodings>
+            <dropline drop-when='selected' haslabel='false' x-axis='true' y-axis='true' />
+            <trendline enable-confidence-bands='false' enable-instant-analytics='true' enabled='true' exclude-color='false' exclude-intercept='false' fit='linear' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#3f9efb' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='8' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0c7fw9y17sgzsr1ecyd950gdsx6y].[sum:Underground journeys :qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <lod column='[federated.0c7fw9y17sgzsr1ecyd950gdsx6y].[:Measure Names]' />
+            </encodings>
+            <dropline drop-when='selected' haslabel='false' x-axis='true' y-axis='true' />
+            <trendline enable-confidence-bands='false' enable-instant-analytics='true' enabled='true' exclude-color='false' exclude-intercept='false' fit='linear' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#0dc25e' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.0c7fw9y17sgzsr1ecyd950gdsx6y].[sum:Bus journeys:qk] + [federated.0c7fw9y17sgzsr1ecyd950gdsx6y].[sum:Underground journeys :qk])</rows>
+        <cols>[federated.0c7fw9y17sgzsr1ecyd950gdsx6y].[tdy:period_beginning:qk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='taxis'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontcolor='#3f9efb'>AN UBER AMOUNT OF TAXIS</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='combined (uber)' name='federated.1k4253n1h2tlol0zrtxuw1bjtpmd' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1k4253n1h2tlol0zrtxuw1bjtpmd'>
+            <column datatype='integer' name='[Taxi only licensed drivers]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Total driver  licences  issued]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Total licensed PHVs]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Total licensed taxis]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Taxi only licensed drivers]' derivation='Sum' name='[sum:Taxi only licensed drivers:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Total driver  licences  issued]' derivation='Sum' name='[sum:Total driver  licences  issued:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Total licensed PHVs]' derivation='Sum' name='[sum:Total licensed PHVs:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Total licensed taxis]' derivation='Sum' name='[sum:Total licensed taxis:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1k4253n1h2tlol0zrtxuw1bjtpmd].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1k4253n1h2tlol0zrtxuw1bjtpmd].[sum:Total licensed PHVs:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1k4253n1h2tlol0zrtxuw1bjtpmd].[sum:Total licensed taxis:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1k4253n1h2tlol0zrtxuw1bjtpmd].[sum:Total driver  licences  issued:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <sort class='manual' column='[federated.1k4253n1h2tlol0zrtxuw1bjtpmd].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.1k4253n1h2tlol0zrtxuw1bjtpmd].[sum:Taxi only licensed drivers:qk]&quot;</bucket>
+              <bucket>&quot;[federated.1k4253n1h2tlol0zrtxuw1bjtpmd].[sum:Total licensed PHVs:qk]&quot;</bucket>
+              <bucket>&quot;[federated.1k4253n1h2tlol0zrtxuw1bjtpmd].[sum:Total licensed taxis:qk]&quot;</bucket>
+              <bucket>&quot;[federated.1k4253n1h2tlol0zrtxuw1bjtpmd].[sum:Total driver  licences  issued:qk]&quot;</bucket>
+            </dictionary>
+          </sort>
+          <slices>
+            <column>[federated.1k4253n1h2tlol0zrtxuw1bjtpmd].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='refline'>
+            <format attr='fill-above' id='refline0' value='#00000000' />
+            <format attr='fill-below' id='refline0' value='#00000000' />
+            <format attr='line-visibility' id='refline0' value='on' />
+            <format attr='line-pattern-only' id='refline0' value='dashed' />
+            <format attr='stroke-color' id='refline0' value='#303c42' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.1k4253n1h2tlol0zrtxuw1bjtpmd].[:Measure Names]' />
+            </encodings>
+            <reference-line axis-column='[federated.1k4253n1h2tlol0zrtxuw1bjtpmd].[none:Year:qk]' enable-instant-analytics='true' formula='constant' id='refline0' label-type='none' scope='per-pane' value='2012' value-column='[federated.1k4253n1h2tlol0zrtxuw1bjtpmd].[none:Year:qk]' z-order='1' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='6.7580051422119141' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1k4253n1h2tlol0zrtxuw1bjtpmd].[Multiple Values]</rows>
+        <cols>[federated.1k4253n1h2tlol0zrtxuw1bjtpmd].[none:Year:qk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='tfl'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontcolor='#3f9efb'>USE OF TFL ISN&apos;T LEAVING THE STATION</run>
+            <run>Æ&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='tfl_out (uber)' name='federated.0c7fw9y17sgzsr1ecyd950gdsx6y' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0c7fw9y17sgzsr1ecyd950gdsx6y'>
+            <column datatype='integer' name='[Bus journeys]' role='measure' type='quantitative' />
+            <column caption='sum' datatype='integer' name='[Calculation_718887096257626112]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Bus journeys] + [DLR Journeys ]+ [Emirates Airline Journeys ] + [Overground Journeys] + [Tram Journeys] + [Underground journeys ]' />
+            </column>
+            <column caption='DLR Journeys' datatype='integer' name='[DLR Journeys ]' role='measure' type='quantitative' />
+            <column caption='Emirates Airline Journeys' datatype='integer' name='[Emirates Airline Journeys ]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Overground Journeys]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Tram Journeys]' role='measure' type='quantitative' />
+            <column caption='Underground journeys' datatype='integer' name='[Underground journeys ]' role='measure' type='quantitative' />
+            <column caption='Period Beginning' datatype='date' name='[period_beginning]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_718887096257626112]' derivation='Sum' name='[sum:Calculation_718887096257626112:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[period_beginning]' derivation='Day-Trunc' name='[tdy:period_beginning:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0c7fw9y17sgzsr1ecyd950gdsx6y].[:Measure Names]'>
+            <groupfilter function='level-members' level='[:Measure Names]' />
+          </filter>
+          <slices>
+            <column>[federated.0c7fw9y17sgzsr1ecyd950gdsx6y].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0c7fw9y17sgzsr1ecyd950gdsx6y].[sum:Calculation_718887096257626112:qk]' field-type='quantitative' max='367483964' min='200000000' range-type='fixed' scope='rows' type='space' />
+            <format attr='subtitle' class='0' field='[federated.0c7fw9y17sgzsr1ecyd950gdsx6y].[sum:Calculation_718887096257626112:qk]' scope='rows' value='' />
+            <format attr='auto-subtitle' class='0' field='[federated.0c7fw9y17sgzsr1ecyd950gdsx6y].[sum:Calculation_718887096257626112:qk]' scope='rows' value='true' />
+            <format attr='title' class='0' field='[federated.0c7fw9y17sgzsr1ecyd950gdsx6y].[tdy:period_beginning:qk]' scope='cols' value='Period Beginning' />
+            <format attr='subtitle' class='0' field='[federated.0c7fw9y17sgzsr1ecyd950gdsx6y].[tdy:period_beginning:qk]' scope='cols' value='' />
+            <format attr='auto-subtitle' class='0' field='[federated.0c7fw9y17sgzsr1ecyd950gdsx6y].[tdy:period_beginning:qk]' scope='cols' value='true' />
+            <format attr='title' class='0' field='[federated.0c7fw9y17sgzsr1ecyd950gdsx6y].[sum:Calculation_718887096257626112:qk]' scope='rows' value='TFL total travel' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='17' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <trendline enable-confidence-bands='false' enable-instant-analytics='true' enabled='true' exclude-color='false' exclude-intercept='false' fit='linear' />
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Period Beginning:&#9;</run>
+                <run bold='true'>&lt;[federated.0c7fw9y17sgzsr1ecyd950gdsx6y].[tdy:period_beginning:qk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>TFL travel:&#9;</run>
+                <run bold='true'>&lt;[federated.0c7fw9y17sgzsr1ecyd950gdsx6y].[sum:Calculation_718887096257626112:qk]&gt;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+                <format attr='mark-color' value='#666666' />
+                <format attr='size' value='1.7581214904785156' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='1448' />
+                <format attr='maxwidth' value='1448' />
+                <format attr='minheight' value='569' />
+                <format attr='maxheight' value='569' />
+                <format attr='aspect' value='0' />
+                <format attr='minwidth' value='1448' />
+                <format attr='maxwidth' value='1448' />
+                <format attr='minheight' value='569' />
+                <format attr='maxheight' value='569' />
+                <format attr='aspect' value='0' />
+                <format attr='minwidth' value='1448' />
+                <format attr='maxwidth' value='1448' />
+                <format attr='minheight' value='569' />
+                <format attr='maxheight' value='569' />
+                <format attr='aspect' value='0' />
+                <format attr='minwidth' value='1448' />
+                <format attr='maxwidth' value='1448' />
+                <format attr='minheight' value='569' />
+                <format attr='maxheight' value='569' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0c7fw9y17sgzsr1ecyd950gdsx6y].[sum:Calculation_718887096257626112:qk]</rows>
+        <cols>[federated.0c7fw9y17sgzsr1ecyd950gdsx6y].[tdy:period_beginning:qk]</cols>
+      </table>
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Dashboard 1'>
+      <style />
+      <size maxheight='768' maxwidth='1366' minheight='768' minwidth='1366' preset-index='0' sizing-mode='fixed' />
+      <zones use-insets='false'>
+        <zone h='100000' id='2' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='97916' id='20' param='horz' type='layout-flow' w='98828' x='586' y='1042'>
+            <zone h='97916' id='17' param='horz' type='layout-flow' w='98828' x='586' y='1042'>
+              <zone h='97916' id='15' type='layout-basic' w='98828' x='586' y='1042'>
+                <zone h='97916' id='6' param='horz' type='layout-flow' w='98828' x='586' y='1042'>
+                  <zone h='97916' id='4' type='layout-basic' w='98828' x='586' y='1042'>
+                    <zone h='93750' id='11' name='bus/tube' w='98828' x='586' y='1042'>
+                      <zone-style>
+                        <format attr='border-color' value='#000000' />
+                        <format attr='border-style' value='none' />
+                        <format attr='border-width' value='0' />
+                        <format attr='margin' value='4' />
+                      </zone-style>
+                    </zone>
+                    <zone h='4166' id='13' param='vert' type='layout-flow' w='98828' x='586' y='94792' />
+                  </zone>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='7161' id='14' is-centered='0' is-scaled='1' param='C:/data/uber.png' type='bitmap' w='3514' x='22767' y='47135' />
+        <zone h='6510' id='18' is-centered='0' is-scaled='1' param='C:/data/night.png' type='bitmap' w='3441' x='74817' y='46094' />
+      </zones>
+    </dashboard>
+    <dashboard name='Dashboard 2'>
+      <style />
+      <size maxheight='768' maxwidth='1366' minheight='768' minwidth='1366' preset-index='0' sizing-mode='fixed' />
+      <zones use-insets='false'>
+        <zone h='100000' id='2' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='97916' id='1' name='tfl' w='98828' x='586' y='1042'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+    </dashboard>
+    <dashboard name='Dashboard 3'>
+      <style />
+      <size maxheight='768' maxwidth='1366' minheight='768' minwidth='1366' preset-index='0' sizing-mode='fixed' />
+      <zones use-insets='false'>
+        <zone h='100000' id='2' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='97916' id='5' param='horz' type='layout-flow' w='98828' x='586' y='1042'>
+            <zone h='97916' id='3' type='layout-basic' w='87115' x='586' y='1042'>
+              <zone h='97916' id='1' name='taxis' w='87115' x='586' y='1042'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone fixed-size='160' h='97916' id='4' is-fixed='true' param='vert' type='layout-flow' w='11713' x='87701' y='1042'>
+              <zone h='11198' id='6' name='taxis' pane-specification-id='0' param='[federated.1k4253n1h2tlol0zrtxuw1bjtpmd].[:Measure Names]' type='color' w='11713' x='87701' y='1042'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='8073' id='7' is-centered='0' is-scaled='1' param='C:/data/uber.png' type='bitmap' w='6369' x='24012' y='48438' />
+      </zones>
+    </dashboard>
+    <dashboard name='Story 1' type='storyboard'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>TFL usage</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style />
+      <size maxheight='968' maxwidth='1366' minheight='968' minwidth='1366' preset-index='0' sizing-mode='fixed' />
+      <zones use-insets='false'>
+        <zone h='100000' id='2' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98348' id='7' param='vert' removable='false' type='layout-flow' w='98828' x='586' y='826'>
+            <zone h='98348' id='1' param='vert' removable='false' type='layout-flow' w='98828' x='586' y='826'>
+              <zone h='8161' id='4' paired-zone-id='5' removable='false' type='flipboard-nav' w='98828' x='586' y='826' />
+              <zone h='90187' id='5' paired-zone-id='4' removable='false' type='flipboard' w='98828' x='586' y='8987'>
+                <flipboard active-id='3' nav-type='number' show-nav-arrows='true'>
+                  <story-points>
+                    <story-point captured-sheet='Dashboard 2' id='3' />
+                    <story-point captured-sheet='Dashboard 1' id='1' />
+                    <story-point captured-sheet='Dashboard 3' id='4' />
+                  </story-points>
+                </flipboard>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+    </dashboard>
+  </dashboards>
+  <windows source-height='51'>
+    <window class='dashboard' maximized='true' name='Story 1'>
+      <viewpoints />
+      <active id='-1' />
+    </window>
+    <window class='dashboard' hidden='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='bus/tube'>
+          <zoom type='entire-view' />
+          <floating-toolbar-visibility value='1' />
+        </viewpoint>
+      </viewpoints>
+      <active id='11' />
+    </window>
+    <window class='dashboard' hidden='true' name='Dashboard 2'>
+      <viewpoints>
+        <viewpoint name='tfl'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+    </window>
+    <window class='dashboard' hidden='true' name='Dashboard 3'>
+      <viewpoints>
+        <viewpoint name='taxis'>
+          <zoom type='entire-view' />
+          <highlight>
+            <color-one-way>
+              <field>[federated.1k4253n1h2tlol0zrtxuw1bjtpmd].[:Measure Names]</field>
+            </color-one-way>
+          </highlight>
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+    </window>
+    <window class='worksheet' hidden='true' name='bus/tube'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0c7fw9y17sgzsr1ecyd950gdsx6y].[:Measure Names]</field>
+            <field>[federated.0c7fw9y17sgzsr1ecyd950gdsx6y].[yr:period_beginning:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' hidden='true' name='taxis'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='232'>
+            <card pane-specification-id='0' param='[federated.1k4253n1h2tlol0zrtxuw1bjtpmd].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <selection-collection>
+          <node-selection select-tuples='false'>
+            <oriented-node-reference orientation='horizontal'>
+              <node-reference>
+                <axis>[federated.1k4253n1h2tlol0zrtxuw1bjtpmd].[none:Year:qk]</axis>
+              </node-reference>
+              <page-reference />
+            </oriented-node-reference>
+          </node-selection>
+        </selection-collection>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1k4253n1h2tlol0zrtxuw1bjtpmd].[:Measure Names]</field>
+            <field>[federated.1k4253n1h2tlol0zrtxuw1bjtpmd].[none:Year:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' hidden='true' name='tfl'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0c7fw9y17sgzsr1ecyd950gdsx6y].[:Measure Names]</field>
+            <field>[federated.0c7fw9y17sgzsr1ecyd950gdsx6y].[tdy:period_beginning:qk]</field>
+            <field>[federated.0c7fw9y17sgzsr1ecyd950gdsx6y].[tmn:period_beginning:qk]</field>
+            <field>[federated.0c7fw9y17sgzsr1ecyd950gdsx6y].[yr:period_beginning:ok]</field>
+            <field>[federated.0c7fw9y17sgzsr1ecyd950gdsx6y].[yr:period_ending:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Story 1' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
