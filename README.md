@@ -14,10 +14,14 @@ https://public.tableau.com/profile/farah.shair#!/vizhome/UberTweetSentiment/Stor
 ## Data Sources
 *************
 
-# LondonUnemployment.csv
+LondonUnemployment.csv
 This file contains quarterly London unemployment rates, from 2011 Q1 until 2017 Q2.
-# TaxiDrivers.csv
+TaxiDrivers.csv
 This file contains annual national data about the number of taxi drivers in the UK, segmented by part time and full time, and employed and self employed.
+uber_twitter 
+This file contains all the tweets used in the analysis on Tableau Public, and their sentiment score
+CO2 Emissions
+Contains boroughs of London and the kilotonnes of CO2 emitted from transport
 
 *****************
 ## Historical Tweets
