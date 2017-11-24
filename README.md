@@ -7,7 +7,8 @@ how Uber has affected London, since time itself began( well actually, just from 
 *********************************************************************************************************************************
 
 ## Tableau Public Analytics
-Please follow this link to Tableau Public, and you can see our analysis on the data gathered so far.
+Please follow these links to Tableau Public, and you can see our analysis on the data gathered so far.
+https://public.tableau.com/profile/farah.shair#!/vizhome/UberTweetSentiment/Story1
 
 ************
 ## Data Sources
