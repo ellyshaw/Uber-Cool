@@ -24,6 +24,12 @@ This file contains all the tweets used in the analysis on Tableau Public, and th
 Contains boroughs of London and the kilotonnes of CO2 emitted from transport
 
 *****************
+## Taxi Drivers
+*****************
+
+This folder contains a graph showing that since the introduction of Uber to the UK, numbers of self-employed taxi drivers have increased at a much higher rate than numbers of employed taxi drivers.
+
+*****************
 ## Historical Tweets
 *****************
 
