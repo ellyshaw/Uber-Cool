@@ -14,10 +14,10 @@ https://public.tableau.com/profile/farah.shair#!/vizhome/UberTweetSentiment/Stor
 ## Data Sources
 *************
 
-# CleanLondonUnemploymentNew.csv - ELLY PLZ ADD A DESCRIPTION FOR EACH FILE
-# LondonUnemployment.xls
-# selfemployedtaxi.csv
-# taxidriverdata.xlsx
+# LondonUnemployment.csv
+This file contains quarterly London unemployment rates, from 2011 Q1 until 2017 Q2.
+# TaxiDrivers.csv
+This file contains annual national data about the number of taxi drivers in the UK, segmented by part time and full time, and employed and self employed.
 
 *****************
 ## Historical Tweets
@@ -32,15 +32,15 @@ This folder contains the code used to scrape tweets since 2012 and generate sent
 Enter the cavernous Reddit folder to find cave carvings of the creatation of a wordcloud from a Reddit Comment thread as well as a copy of the cloud.
 
 ****************************************************
-## Scikit learn predictions for unemployment in London 
+## SciKit learn predictions for unemployment in London 
 ****************************************************
 
-It may sound scary but this alien tech is kind, like e.t.
-the code found in the file unemployment prediction uses previous unemployment data to predict the future. 
-this link shows the results with the red based on real data and the blue a prediction;
+It may sound scary but this alien tech is kind, like E.T.
+The code found in the file unemployment_prediction uses previous unemployment data to predict the future. 
+This link shows the results with the red based on real data and the blue a prediction:
 https://plot.ly/~RobDavies1995/27
 
 **********
 ## TFL Stuff
 **********
-Contains the TFL data and the tableau file used to generate the Tableau Public above. 
+Contains the TFL data and the Tableau file used to generate the Tableau Public above. 
